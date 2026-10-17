@@ -1,0 +1,71 @@
+Command				Meaning
+
+git --version			Check the installed Git version.
+git config --list		Display Git configuration.
+git help			Display Git help.
+git init			Initialize a Git repository.
+git clone URL			Copy a remote repository to your computer.
+git clone URL my-project	Clone a repository into a named folder.
+git status			Show the current repository status.
+
+Ex.
+	cd my-project
+	git init
+	git status
+
+git add index.html		Stage a specific file.
+git add style.css script.js	Stage specific files.
+git add .			Stage changes in the current directory and its subdirectories.
+git add *			Stage all changes in the repository.
+git commit -m "message"		Save staged changes in a commit.
+git log				Show commit history.
+git log --oneline		Show a short commit history.
+git push			Upload local commits to the remote.
+git pull			Fetch and integrate remote changes.
+git fetch			Download remote updates without integrating them.
+git remote add origin URL	Connect the repository to a remote repository.
+
+Ex.
+	git init
+	git add .
+	git commit -m "Initial commit"
+	git branch -M main
+	git remote add origin https://github.com/USERNAME/REPOSITORY.git
+	git push -u origin main
+
+git branch			List local branches.
+
+git switch feature		Switch to an existing branch.
+git branch feature		Create a new branch.
+git checkout feature		Switch branches using the older command.
+git push -u origin feature	Push a branch and set its upstream.
+git merge feature		Merge a branch into the current branch.
+git rebase --continue		Continue a rebase after resolving conflicts.
+
+Ex. 
+	git switch main
+	git pull
+	git merge feature/search
+	git push
+
+git restore file.js		Discard unstaged changes in a file.
+git restore .			Discard unstaged changes in the current directory.
+git restore --staged file.js	Unstage a file without discarding its edits.
+git reset --soft HEAD~1		Undo the last commit but keep changes staged.
+git reset --mixed HEAD~1	Undo the last commit and keep changes unstaged.
+git reset --hard HEAD~1		Move back one commit and discard affected tracked changes.
+git revert COMMIT		Create a new commit that reverses another commit.
+
+
+
+
+.gitignore			The .gitignore file specifies which files and directories Git should ignore when checking for changes.
+
+Ex.
+	node_modules/
+	.env
+	dist/
+	*.log
+
+
+
